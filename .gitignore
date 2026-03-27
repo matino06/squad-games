@@ -9,6 +9,7 @@ build/
 ios/Pods/
 android/.gradle/
 android/app/build/
+SQUAD_GAMES_APP_OVERVIEW.md
 
 .DS_Store
 *.swp
