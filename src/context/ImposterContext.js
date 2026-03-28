@@ -6,6 +6,7 @@ const ImposterContext = createContext(null);
 
 const initialState = {
   playerCount: 5,
+  hintEnabled: true,
   players: [],
   wordPair: null,
   winner: null,       // 'village' | 'imposter'
@@ -15,7 +16,7 @@ const initialState = {
 function imposterReducer(state, action) {
   switch (action.type) {
     case 'START_GAME': {
-      const { playerCount, language } = action.payload;
+      const { playerCount, language, hintEnabled } = action.payload;
       const pairs = WORD_PAIRS_BY_LANG[language] ?? WORD_PAIRS_BY_LANG.bs;
       const wordPair = pairs[randomInt(pairs.length)];
       const imposterIndex = randomInt(playerCount);
@@ -25,7 +26,7 @@ function imposterReducer(state, action) {
         word: i === imposterIndex ? wordPair.category : wordPair.main,
         isImposter: i === imposterIndex,
       }));
-      return { ...state, playerCount, players, wordPair, winner: null, eliminatedPlayer: null };
+      return { ...state, playerCount, hintEnabled: hintEnabled ?? state.hintEnabled, players, wordPair, winner: null, eliminatedPlayer: null };
     }
 
     case 'SET_PLAYER_NAME': {
@@ -48,6 +49,7 @@ function imposterReducer(state, action) {
       return {
         ...initialState,
         playerCount: state.playerCount,
+        hintEnabled: state.hintEnabled,
         players: state.players.map(p => ({ id: p.id, name: p.name, word: '', isImposter: false })),
       };
 

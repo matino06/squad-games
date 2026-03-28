@@ -157,6 +157,11 @@ const bs = {
   "imposter.setup.rule4": "Glasajte ko je po vašem mišljenju imposter",
   "imposter.setup.players_label": "Broj igrača",
   "imposter.setup.players_hint": "Preporučeno: 3–12 igrača",
+  "imposter.setup.hint_label": "Hint za Impostera",
+  "imposter.setup.hint_on_desc": "Imposter vidi kategoriju riječi",
+  "imposter.setup.hint_off_desc": "Imposter ne zna kategoriju",
+  "imposter.setup.hint_on": "DA",
+  "imposter.setup.hint_off": "NE",
   "imposter.setup.start": "Počni igru →",
   // Imposter reveal
   "imposter.reveal.player_n_of_m": "Igrač {{n}} od {{m}}",
@@ -169,6 +174,8 @@ const bs = {
   "imposter.reveal.you_are_imposter": "TI SI IMPOSTER",
   "imposter.reveal.fake_word_label": "Kategorija igre",
   "imposter.reveal.imposter_hint": "Znaš samo kategoriju — ne otkrij se!",
+  "imposter.reveal.no_hint_label": "Bez hinta",
+  "imposter.reveal.no_hint_desc": "Nemaš nikakav hint — slušaj pažljivo i ne otkrij se!",
   "imposter.reveal.secret_word": "TAJNA RIJEČ",
   "imposter.reveal.word_hint": "Opišite ovu riječ bez da je direktno kažete",
   "imposter.reveal.name_label": "Unesite svoje ime:",
@@ -462,7 +469,11 @@ const hr = {
   "alias.setup.cat_movies": "Filmovi i TV",
   "alias.setup.cat_movies_desc": "Filmovi, serije i klasici",
   "lang.select_title": "Odaberite jezik",
+  "intrigue.chars.knez": "Knez",
   "intrigue.chars.ubojica": "Ubojica",
+  "intrigue.chars.razbojnik": "Razbojnik",
+  "intrigue.chars.putnik": "Putnik",
+  "intrigue.chars.cuvarica": "Čuvarica",
 };
 
 // ─────────────────────────────────────────────────────────────
@@ -509,7 +520,11 @@ const sr = {
     "Ti si mafija! Sarađuj s timom i eliminiši meštane svake noći, a danju se pravi da si nevin.",
   "roles.police.name": "Policajac",
   "lang.select_title": "Odaberite jezik",
+  "intrigue.chars.knez": "Knez",
   "intrigue.chars.ubojica": "Ubojica",
+  "intrigue.chars.razbojnik": "Razbojnik",
+  "intrigue.chars.putnik": "Putnik",
+  "intrigue.chars.cuvarica": "Čuvarica",
 };
 
 // ─────────────────────────────────────────────────────────────
@@ -652,6 +667,11 @@ const en = {
   "imposter.setup.rule4": "Vote for who you think is the imposter",
   "imposter.setup.players_label": "Players",
   "imposter.setup.players_hint": "Recommended: 3–12 players",
+  "imposter.setup.hint_label": "Imposter Hint",
+  "imposter.setup.hint_on_desc": "Imposter sees the word category",
+  "imposter.setup.hint_off_desc": "Imposter doesn't know the category",
+  "imposter.setup.hint_on": "YES",
+  "imposter.setup.hint_off": "NO",
   "imposter.setup.start": "Start game →",
   "imposter.reveal.player_n_of_m": "Player {{n}} of {{m}}",
   "imposter.reveal.tap_to_see": "Tap the card to see your secret word",
@@ -663,6 +683,8 @@ const en = {
   "imposter.reveal.fake_word_label": "Game category",
   "imposter.reveal.imposter_hint":
     "You only know the category — don't give yourself away!",
+  "imposter.reveal.no_hint_label": "No hint",
+  "imposter.reveal.no_hint_desc": "You have no hint — listen carefully and don't give yourself away!",
   "imposter.reveal.secret_word": "SECRET WORD",
   "imposter.reveal.word_hint": "Describe this word without saying it directly",
   "imposter.reveal.name_label": "Enter your name:",
@@ -930,11 +952,11 @@ const en = {
   "intrigue.victory.subtitle": "New Advisor of the Court",
   "intrigue.victory.new_game": "New Game",
   "intrigue.victory.exit": "Exit",
-  "intrigue.chars.knez": "Knez",
+  "intrigue.chars.knez": "Duke",
   "intrigue.chars.ubojica": "Assassin",
-  "intrigue.chars.razbojnik": "Razbojnik",
-  "intrigue.chars.putnik": "Putnik",
-  "intrigue.chars.cuvarica": "Čuvarica",
+  "intrigue.chars.razbojnik": "Bandit",
+  "intrigue.chars.putnik": "Traveler",
+  "intrigue.chars.cuvarica": "Guard",
   "intrigue.result.action_success": "Action successful",
   "intrigue.result.action_blocked": "Action blocked",
   "intrigue.result.action_failed": "Action failed",
@@ -1078,6 +1100,11 @@ const es = {
     "El impostor solo conoce la categoría e intenta no delatarse",
   "imposter.setup.rule4": "Vota por quien crees que es el impostor",
   "imposter.setup.players_label": "Número de jugadores",
+  "imposter.setup.hint_label": "Pista para el Impostor",
+  "imposter.setup.hint_on_desc": "El impostor ve la categoría de la palabra",
+  "imposter.setup.hint_off_desc": "El impostor no conoce la categoría",
+  "imposter.setup.hint_on": "SÍ",
+  "imposter.setup.hint_off": "NO",
   "imposter.setup.start": "Iniciar juego →",
   "imposter.reveal.player_n_of_m": "Jugador {{n}} de {{m}}",
   "imposter.reveal.tap_to_see": "Toca la carta para ver tu palabra secreta",
@@ -1088,6 +1115,8 @@ const es = {
   "imposter.reveal.you_are_imposter": "ERES EL IMPOSTOR",
   "imposter.reveal.fake_word_label": "Categoría del juego",
   "imposter.reveal.imposter_hint": "¡Solo sabes la categoría — no te delates!",
+  "imposter.reveal.no_hint_label": "Sin pista",
+  "imposter.reveal.no_hint_desc": "No tienes ninguna pista — ¡escucha con atención y no te delates!",
   "imposter.reveal.secret_word": "PALABRA SECRETA",
   "imposter.reveal.word_hint": "Describe esta palabra sin decirla directamente",
   "imposter.reveal.name_label": "Introduce tu nombre:",
@@ -1263,7 +1292,11 @@ const es = {
   "alias.final.new_game": "NUEVA PARTIDA",
   "alias.final.home": "INICIO",
   "lang.select_title": "Elegir idioma",
+  "intrigue.chars.knez": "Duque",
   "intrigue.chars.ubojica": "Asesino",
+  "intrigue.chars.razbojnik": "Bandido",
+  "intrigue.chars.putnik": "Viajero",
+  "intrigue.chars.cuvarica": "Guardia",
 };
 
 // ─────────────────────────────────────────────────────────────
@@ -1403,6 +1436,11 @@ const pt = {
     "O impostor só conhece a categoria e tenta se misturar",
   "imposter.setup.rule4": "Vote em quem você acha que é o impostor",
   "imposter.setup.players_label": "Número de jogadores",
+  "imposter.setup.hint_label": "Dica para o Impostor",
+  "imposter.setup.hint_on_desc": "O impostor vê a categoria da palavra",
+  "imposter.setup.hint_off_desc": "O impostor não conhece a categoria",
+  "imposter.setup.hint_on": "SIM",
+  "imposter.setup.hint_off": "NÃO",
   "imposter.setup.start": "Iniciar jogo →",
   "imposter.reveal.player_n_of_m": "Jogador {{n}} de {{m}}",
   "imposter.reveal.tap_to_see": "Toque na carta para ver sua palavra secreta",
@@ -1413,6 +1451,8 @@ const pt = {
   "imposter.reveal.you_are_imposter": "VOCÊ É O IMPOSTOR",
   "imposter.reveal.fake_word_label": "Categoria do jogo",
   "imposter.reveal.imposter_hint": "Você só sabe a categoria — não se revele!",
+  "imposter.reveal.no_hint_label": "Sem dica",
+  "imposter.reveal.no_hint_desc": "Você não tem nenhuma dica — ouça com atenção e não se revele!",
   "imposter.reveal.secret_word": "PALAVRA SECRETA",
   "imposter.reveal.word_hint": "Descreva esta palavra sem dizê-la diretamente",
   "imposter.reveal.name_label": "Digite seu nome:",
@@ -1586,7 +1626,11 @@ const pt = {
   "alias.final.new_game": "NOVO JOGO",
   "alias.final.home": "INÍCIO",
   "lang.select_title": "Escolher idioma",
+  "intrigue.chars.knez": "Duque",
   "intrigue.chars.ubojica": "Assassino",
+  "intrigue.chars.razbojnik": "Bandido",
+  "intrigue.chars.putnik": "Viajante",
+  "intrigue.chars.cuvarica": "Guarda",
 };
 
 // ─────────────────────────────────────────────────────────────
@@ -1729,6 +1773,11 @@ const fr = {
     "L'imposteur ne connaît que la catégorie et essaie de se fondre dans la masse",
   "imposter.setup.rule4": "Votez pour qui vous pensez être l'imposteur",
   "imposter.setup.players_label": "Nombre de joueurs",
+  "imposter.setup.hint_label": "Indice pour l'Imposteur",
+  "imposter.setup.hint_on_desc": "L'imposteur voit la catégorie du mot",
+  "imposter.setup.hint_off_desc": "L'imposteur ne connaît pas la catégorie",
+  "imposter.setup.hint_on": "OUI",
+  "imposter.setup.hint_off": "NON",
   "imposter.setup.start": "Démarrer →",
   "imposter.reveal.player_n_of_m": "Joueur {{n}} sur {{m}}",
   "imposter.reveal.tap_to_see":
@@ -1741,6 +1790,8 @@ const fr = {
   "imposter.reveal.fake_word_label": "Catégorie du jeu",
   "imposter.reveal.imposter_hint":
     "Tu ne connais que la catégorie — ne te trahis pas !",
+  "imposter.reveal.no_hint_label": "Sans indice",
+  "imposter.reveal.no_hint_desc": "Tu n'as aucun indice — écoute attentivement et ne te trahis pas !",
   "imposter.reveal.secret_word": "MOT SECRET",
   "imposter.reveal.word_hint": "Décrivez ce mot sans le dire directement",
   "imposter.reveal.name_label": "Entrez votre nom :",
@@ -1915,7 +1966,11 @@ const fr = {
   "alias.final.new_game": "NOUVELLE PARTIE",
   "alias.final.home": "ACCUEIL",
   "lang.select_title": "Choisir la langue",
+  "intrigue.chars.knez": "Duc",
   "intrigue.chars.ubojica": "Assassin",
+  "intrigue.chars.razbojnik": "Bandit",
+  "intrigue.chars.putnik": "Voyageur",
+  "intrigue.chars.cuvarica": "Garde",
 };
 
 // ─────────────────────────────────────────────────────────────
@@ -2059,6 +2114,11 @@ const de = {
     "Der Verräter kennt nur die Kategorie und versucht, sich anzupassen",
   "imposter.setup.rule4": "Stimme ab, wer deiner Meinung nach der Verräter ist",
   "imposter.setup.players_label": "Spieleranzahl",
+  "imposter.setup.hint_label": "Hinweis für den Verräter",
+  "imposter.setup.hint_on_desc": "Der Verräter sieht die Wortkategorie",
+  "imposter.setup.hint_off_desc": "Der Verräter kennt die Kategorie nicht",
+  "imposter.setup.hint_on": "JA",
+  "imposter.setup.hint_off": "NEIN",
   "imposter.setup.start": "Spiel starten →",
   "imposter.reveal.player_n_of_m": "Spieler {{n}} von {{m}}",
   "imposter.reveal.tap_to_see":
@@ -2071,6 +2131,8 @@ const de = {
   "imposter.reveal.fake_word_label": "Spielkategorie",
   "imposter.reveal.imposter_hint":
     "Du kennst nur die Kategorie — verrate dich nicht!",
+  "imposter.reveal.no_hint_label": "Kein Hinweis",
+  "imposter.reveal.no_hint_desc": "Du hast keinen Hinweis — höre genau zu und verrate dich nicht!",
   "imposter.reveal.secret_word": "GEHEIMWORT",
   "imposter.reveal.word_hint":
     "Beschreibe dieses Wort, ohne es direkt zu sagen",
@@ -2247,7 +2309,11 @@ const de = {
   "alias.final.new_game": "NEUES SPIEL",
   "alias.final.home": "STARTSEITE",
   "lang.select_title": "Sprache wählen",
+  "intrigue.chars.knez": "Herzog",
   "intrigue.chars.ubojica": "Attentäter",
+  "intrigue.chars.razbojnik": "Bandit",
+  "intrigue.chars.putnik": "Reisender",
+  "intrigue.chars.cuvarica": "Wächterin",
 };
 
 // ─────────────────────────────────────────────────────────────
@@ -2389,6 +2455,11 @@ const it = {
     "L'impostore conosce solo la categoria e cerca di mimetizzarsi",
   "imposter.setup.rule4": "Vota per chi pensi sia l'impostore",
   "imposter.setup.players_label": "Numero di giocatori",
+  "imposter.setup.hint_label": "Suggerimento per l'Impostore",
+  "imposter.setup.hint_on_desc": "L'impostore vede la categoria della parola",
+  "imposter.setup.hint_off_desc": "L'impostore non conosce la categoria",
+  "imposter.setup.hint_on": "SÌ",
+  "imposter.setup.hint_off": "NO",
   "imposter.setup.start": "Inizia il gioco →",
   "imposter.reveal.player_n_of_m": "Giocatore {{n}} di {{m}}",
   "imposter.reveal.tap_to_see":
@@ -2400,6 +2471,8 @@ const it = {
   "imposter.reveal.you_are_imposter": "SEI L'IMPOSTORE",
   "imposter.reveal.fake_word_label": "Categoria del gioco",
   "imposter.reveal.imposter_hint": "Conosci solo la categoria — non tradirti!",
+  "imposter.reveal.no_hint_label": "Nessun suggerimento",
+  "imposter.reveal.no_hint_desc": "Non hai nessun suggerimento — ascolta attentamente e non tradirti!",
   "imposter.reveal.secret_word": "PAROLA SEGRETA",
   "imposter.reveal.word_hint":
     "Descrivi questa parola senza dirla direttamente",
@@ -2576,7 +2649,11 @@ const it = {
   "alias.final.new_game": "NUOVA PARTITA",
   "alias.final.home": "HOME",
   "lang.select_title": "Scegli la lingua",
+  "intrigue.chars.knez": "Duca",
   "intrigue.chars.ubojica": "Assassino",
+  "intrigue.chars.razbojnik": "Bandito",
+  "intrigue.chars.putnik": "Viaggiatore",
+  "intrigue.chars.cuvarica": "Guardia",
 };
 
 // ─────────────────────────────────────────────────────────────
@@ -2717,6 +2794,11 @@ const pl = {
     "Zdrajca zna tylko kategorię i stara się wtopić w tłum",
   "imposter.setup.rule4": "Głosuj na tego, kto twoim zdaniem jest zdrajcą",
   "imposter.setup.players_label": "Liczba graczy",
+  "imposter.setup.hint_label": "Podpowiedź dla Zdrajcy",
+  "imposter.setup.hint_on_desc": "Zdrajca widzi kategorię słowa",
+  "imposter.setup.hint_off_desc": "Zdrajca nie zna kategorii",
+  "imposter.setup.hint_on": "TAK",
+  "imposter.setup.hint_off": "NIE",
   "imposter.setup.start": "Rozpocznij grę →",
   "imposter.reveal.player_n_of_m": "Gracz {{n}} z {{m}}",
   "imposter.reveal.tap_to_see": "Dotknij kartę, aby zobaczyć swoje tajne słowo",
@@ -2727,6 +2809,8 @@ const pl = {
   "imposter.reveal.you_are_imposter": "JESTEŚ ZDRAJCĄ",
   "imposter.reveal.fake_word_label": "Kategoria gry",
   "imposter.reveal.imposter_hint": "Znasz tylko kategorię — nie zdradzaj się!",
+  "imposter.reveal.no_hint_label": "Brak podpowiedzi",
+  "imposter.reveal.no_hint_desc": "Nie masz żadnej podpowiedzi — słuchaj uważnie i nie zdradzaj się!",
   "imposter.reveal.secret_word": "TAJNE SŁOWO",
   "imposter.reveal.word_hint": "Opisz to słowo bez mówienia go wprost",
   "imposter.reveal.name_label": "Wpisz swoje imię:",
@@ -2899,7 +2983,11 @@ const pl = {
   "alias.final.new_game": "NOWA GRA",
   "alias.final.home": "STRONA GŁÓWNA",
   "lang.select_title": "Wybierz język",
+  "intrigue.chars.knez": "Książę",
   "intrigue.chars.ubojica": "Zabójca",
+  "intrigue.chars.razbojnik": "Bandyta",
+  "intrigue.chars.putnik": "Podróżnik",
+  "intrigue.chars.cuvarica": "Strażniczka",
 };
 
 // ─────────────────────────────────────────────────────────────

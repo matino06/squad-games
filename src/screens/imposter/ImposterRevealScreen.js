@@ -19,7 +19,7 @@ const IMPOSTER_COLOR = '#a855f7';
 export default function ImposterRevealScreen({ navigation }) {
   const { state, dispatch } = useImposter();
   const { t } = useTranslation();
-  const { players } = state;
+  const { players, hintEnabled } = state;
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [phase, setPhase] = useState('waiting');
@@ -180,14 +180,26 @@ export default function ImposterRevealScreen({ navigation }) {
                       <View style={styles.roleDescBox}>
                         <View style={[styles.roleDescBar, { backgroundColor: IMPOSTER_COLOR }]} />
                         <View style={{ flex: 1 }}>
-                          <View style={styles.categoryLabelRow}>
-                            <MaterialCommunityIcons name="tag-outline" size={13} color="#8a6a92" />
-                            <Text style={styles.imposterWordLabel}>{t('imposter.reveal.fake_word_label')}</Text>
-                          </View>
-                          <View style={styles.categoryBadge}>
-                            <Text style={styles.categoryBadgeText}>{currentPlayer.word}</Text>
-                          </View>
-                          <Text style={styles.roleDescText}>{t('imposter.reveal.imposter_hint')}</Text>
+                          {hintEnabled ? (
+                            <>
+                              <View style={styles.categoryLabelRow}>
+                                <MaterialCommunityIcons name="tag-outline" size={13} color="#8a6a92" />
+                                <Text style={styles.imposterWordLabel}>{t('imposter.reveal.fake_word_label')}</Text>
+                              </View>
+                              <View style={styles.categoryBadge}>
+                                <Text style={styles.categoryBadgeText}>{currentPlayer.word}</Text>
+                              </View>
+                              <Text style={styles.roleDescText}>{t('imposter.reveal.imposter_hint')}</Text>
+                            </>
+                          ) : (
+                            <>
+                              <View style={styles.categoryLabelRow}>
+                                <MaterialCommunityIcons name="tag-off-outline" size={13} color="#8a6a92" />
+                                <Text style={styles.imposterWordLabel}>{t('imposter.reveal.no_hint_label')}</Text>
+                              </View>
+                              <Text style={styles.roleDescText}>{t('imposter.reveal.no_hint_desc')}</Text>
+                            </>
+                          )}
                         </View>
                       </View>
 

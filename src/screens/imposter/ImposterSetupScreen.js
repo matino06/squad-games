@@ -19,10 +19,11 @@ const HELP_RULES = [
 ];
 
 export default function ImposterSetupScreen({ navigation }) {
-  const { dispatch } = useImposter();
+  const { state, dispatch } = useImposter();
   const { t } = useTranslation();
   const { language } = useLanguage();
   const [playerCount, setPlayerCount] = useState(5);
+  const [hintEnabled, setHintEnabled] = useState(state.hintEnabled ?? true);
   const [helpVisible, setHelpVisible] = useState(false);
 
   const changePlayer = (delta) => {
@@ -31,7 +32,7 @@ export default function ImposterSetupScreen({ navigation }) {
 
   const handleStart = () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
-    dispatch({ type: 'START_GAME', payload: { playerCount, language } });
+    dispatch({ type: 'START_GAME', payload: { playerCount, language, hintEnabled } });
     navigation.navigate('ImposterReveal');
   };
 
@@ -75,6 +76,36 @@ export default function ImposterSetupScreen({ navigation }) {
               >
                 <MaterialCommunityIcons name="plus" size={28} color={COLORS.primary} />
               </TouchableOpacity>
+            </View>
+          </View>
+
+          {/* Hint toggle */}
+          <View style={styles.hintCard}>
+            <View style={styles.hintCardLeft}>
+              <MaterialCommunityIcons name="tag-outline" size={20} color={COLORS.primary} />
+              <View style={styles.hintCardText}>
+                <Text style={styles.hintCardTitle}>{t('imposter.setup.hint_label')}</Text>
+                <Text style={styles.hintCardDesc}>
+                  {hintEnabled ? t('imposter.setup.hint_on_desc') : t('imposter.setup.hint_off_desc')}
+                </Text>
+              </View>
+            </View>
+            <View style={styles.hintToggleRow}>
+              {[true, false].map((val) => {
+                const sel = hintEnabled === val;
+                return (
+                  <TouchableOpacity
+                    key={String(val)}
+                    onPress={() => { Haptics.selectionAsync(); setHintEnabled(val); }}
+                    style={[styles.hintPill, sel && styles.hintPillSelected]}
+                    activeOpacity={0.75}
+                  >
+                    <Text style={[styles.hintPillText, sel && styles.hintPillTextSelected]}>
+                      {val ? t('imposter.setup.hint_on') : t('imposter.setup.hint_off')}
+                    </Text>
+                  </TouchableOpacity>
+                );
+              })}
             </View>
           </View>
 
@@ -232,6 +263,59 @@ const styles = StyleSheet.create({
     letterSpacing: -2,
     minWidth: 80,
     textAlign: 'center',
+  },
+
+  // ── Hint toggle card ──
+  hintCard: {
+    backgroundColor: '#2a0b35',
+    borderRadius: 16,
+    padding: 18,
+    borderWidth: 1,
+    borderColor: 'rgba(90,61,98,0.15)',
+    gap: 14,
+  },
+  hintCardLeft: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    gap: 12,
+  },
+  hintCardText: { flex: 1, gap: 2 },
+  hintCardTitle: {
+    fontSize: SIZES.md,
+    fontWeight: '800',
+    color: COLORS.text,
+  },
+  hintCardDesc: {
+    fontSize: SIZES.sm,
+    color: COLORS.textSecondary,
+    lineHeight: 18,
+  },
+  hintToggleRow: {
+    flexDirection: 'row',
+    gap: 8,
+  },
+  hintPill: {
+    flex: 1,
+    height: 40,
+    borderRadius: RADIUS.full,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#1e0428',
+    borderWidth: 1,
+    borderColor: 'rgba(90,61,98,0.3)',
+  },
+  hintPillSelected: {
+    backgroundColor: COLORS.primary,
+    borderColor: COLORS.primary,
+  },
+  hintPillText: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: COLORS.textSecondary,
+    letterSpacing: 0.5,
+  },
+  hintPillTextSelected: {
+    color: '#fff',
   },
 
   // ── Start button ──
