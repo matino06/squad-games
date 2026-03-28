@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Squad Games",
-    "slug": "mafia-game",
+    "slug": "squad-game",
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
@@ -10,13 +10,19 @@
     },
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.yourname.mafiagame"
+      "bundleIdentifier": "com.matino.squadgame",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#0a0a0f"
       },
-      "package": "com.yourname.mafiagame"
+      "package": "com.matino.squadgame",
+      "permissions": [
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ]
     },
     "plugins": [
       [
@@ -26,6 +32,11 @@
         }
       ],
       "expo-asset"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "d54a9ca7-2dbc-4a2e-a8bd-3970e2f23c75"
+      }
+    }
   }
 }

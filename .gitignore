@@ -11,6 +11,9 @@ android/.gradle/
 android/app/build/
 SQUAD_GAMES_APP_OVERVIEW.md
 
+ios/
+android/
+
 .DS_Store
 *.swp
 *.tmp
