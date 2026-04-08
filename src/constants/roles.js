@@ -77,7 +77,7 @@ export const ROLES = {
     nightAction: true,
     nightOrder: 3,
     nightGroup: "doctor",
-    maxCount: 2,
+    maxCount: 1,
     description: "Svake noći spašava jednog igrača od mafijine žrtve.",
     cardDescription:
       "Ti si Doktor! Svake noći možeš spasiti jednog igrača od mafije. Možeš spasiti i sebe!",
@@ -99,7 +99,7 @@ export const ROLES = {
     nightAction: true,
     nightOrder: 4,
     nightGroup: "police",
-    maxCount: 2,
+    maxCount: 1,
     description: "Svake noći istražuje igrača - saznaje je li mafija ili ne.",
     cardDescription:
       "Ti si Policajac! Svake noći istražuješ jednog sumnjivca i saznaješ je li mafija. Rezultat ostaje tajan!",

@@ -49,11 +49,12 @@ export function resolveNight(players, nightActions) {
   if (police !== null && police !== undefined) {
     const target = players.find((p) => p.id === police);
     if (target) {
-      // Don appears innocent to police
-      // Don and Lady appear innocent to police
+      // Don always appears innocent to police
+      // Lady appears innocent while regular mafia/don are alive; appears as mafia once they're all dead
       const role = ROLES[target.role];
+      const mafiaOrDonAlive = players.some(p => p.isAlive && (p.role === 'mafia' || p.role === 'don'));
       const isMafia =
-        role?.team === 'mafia' && target.role !== 'don' && target.role !== 'lady';
+        role?.team === 'mafia' && target.role !== 'don' && (target.role !== 'lady' || !mafiaOrDonAlive);
       policeResult = {
         targetId: police,
         targetName: target.name,

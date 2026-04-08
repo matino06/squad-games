@@ -58,7 +58,8 @@ export default function SetupScreen({ navigation }) {
   const changeRole = (roleId, delta) => {
     setRoleCounts((prev) => {
       const current = prev[roleId] ?? 0;
-      const next = Math.max(0, current + delta);
+      const max = ROLES[roleId]?.maxCount ?? 20;
+      const next = Math.max(0, Math.min(max, current + delta));
       return { ...prev, [roleId]: next };
     });
   };
@@ -139,6 +140,7 @@ export default function SetupScreen({ navigation }) {
           <View style={styles.rolesList}>
             {Object.values(ROLES).map((role) => {
               const count = roleCounts[role.id] ?? 0;
+              const atMax = count >= (role.maxCount ?? 20);
               return (
                 <View
                   key={role.id}
@@ -193,12 +195,13 @@ export default function SetupScreen({ navigation }) {
                     <TouchableOpacity
                       style={styles.counterBtn}
                       onPress={() => changeRole(role.id, 1)}
+                      disabled={atMax}
                       activeOpacity={0.6}
                     >
                       <MaterialCommunityIcons
                         name="plus"
                         size={16}
-                        color={COLORS.primary}
+                        color={atMax ? COLORS.textMuted : COLORS.primary}
                       />
                     </TouchableOpacity>
                   </View>

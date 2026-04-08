@@ -1,6 +1,6 @@
 {
-  "name": "mafia-game",
-  "version": "1.0.0",
+  "name": "squad-game",
+  "version": "1.0.1",
   "main": "expo/AppEntry.js",
   "scripts": {
     "start": "expo start",

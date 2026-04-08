@@ -153,7 +153,8 @@ export default function NightPhaseScreen({ navigation }) {
       const target = players.find((p) => p.id === selectedTarget);
       if (target) {
         const role = ROLES[target.role];
-        const isMafia = role?.team === 'mafia' && target.role !== 'don';
+        const mafiaOrDonAlive = players.some(p => p.isAlive && (p.role === 'mafia' || p.role === 'don'));
+        const isMafia = role?.team === 'mafia' && target.role !== 'don' && (target.role !== 'lady' || !mafiaOrDonAlive);
         setPoliceResultData({ name: target.name, isMafia });
         setPoliceModal(true);
       }
